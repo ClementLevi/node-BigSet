@@ -1,5 +1,5 @@
 {
-    "name": "BigSet",
+    "name": "@clement_levi/bigset",
     "version": "1.0.0",
     "description": "High performance Set for handling massive elements. 高性能的集合类，用于处理大量元素的添加和查找。",
     "main": "index.cjs",

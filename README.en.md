@@ -19,7 +19,7 @@ ENGLISH | [中文](./README.md)
 Install via npm:
 
 ```bash
-npm install bigset
+npm install @clement_levi/bigset
 ```
 
 ## Usage Example
