@@ -8,6 +8,7 @@
 - 自动维护元素的唯一性
 - 能够处理百万级别的数据
 - 支持 Node.js 插件接口
+- ~整个项目都是AI生成的，我根本看不懂里面写了什么~
 
 ## 安装
 
@@ -16,7 +17,9 @@
 ```bash
 npm install bigset
 ```
+
 ## 使用示例
+
 以下是如何使用 BigSet 的示例：
 
 ```javascript
@@ -46,21 +49,27 @@ console.log(myBigSet.toString()); // 输出: "World, "
 ```
 
 ## 测试
+
 通过 Mocha 运行测试：
+
 ```bash
 npm run test
 ```
 
 ## 贡献
+
 欢迎任何形式的贡献！如果您有想法，请创建问题或提交 Pull Request。
 
-Fork 此仓库
-创建您的特性分支 (git checkout -b feature/YourFeature)
-提交您的更改 (git commit -m 'Add some feature')
-推送到分支 (git push origin feature/YourFeature)
-创建新的 Pull Request
-许可
+1. Fork 此仓库
+2. 创建您的特性分支 (git checkout -b feature/YourFeature)
+3. 提交您的更改 (git commit -m 'Add some feature')
+4. 推送到分支 (git push origin feature/YourFeature)
+5. 创建新的 Pull Request
+
+## 许可
+
 该项目采用 MIT 许可，详情请查看 LICENSE 文件。
 
 ## 免责声明
+
 本项目基于 C++ 插件开发，并在 Node.js 环境中运行。请确保在使用前按照说明正确构建和配置插件。

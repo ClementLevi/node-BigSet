@@ -1,0 +1,37 @@
+{
+    "name": "BigSet",
+    "version": "1.0.0",
+    "description": "High performance Set for handling massive elements. 高性能的集合类，用于处理大量元素的添加和查找。",
+    "main": "index.cjs",
+    "gypfile": true,
+    "scripts": {
+        "test": "mocha test/*.js",
+        "build": "node-gyp rebuild",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "node",
+        "addon",
+        "set",
+        "C++",
+        "data-structure"
+    ],
+    "author": "Clement_Levi",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/您的用户名/BigSet.git"
+    },
+    "bugs": {
+        "url": "https://github.com/您的用户名/BigSet/issues"
+    },
+    "homepage": "https://github.com/您的用户名/BigSet#readme",
+    "dependencies": {
+        "node-addon-api": "^8.1.0"
+    },
+    "devDependencies": {
+        "mocha": "^10.7.3",
+        "node-gyp": "^8.4.1",
+        "chai": "4.1.2"
+    }
+}

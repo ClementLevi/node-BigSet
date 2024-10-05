@@ -3,10 +3,17 @@
 const path = require("path");
 const { describe, it, beforeEach } = require("mocha");
 const { expect } = require("chai");
-const bigset = require("../index.cjs"); // 确保路径指向你的 CommonJS 入口文件
+const { BigSet } = require("../index.cjs"); // 确保路径指向你的 CommonJS 入口文件
 
 // 对 BigSet 类进行测试
 describe("BigSet", function () {
+    let bigset; // 声明一个变量用于保存 BigSet 实例
+
+    // 在每个测试之前创建一个新的 BigSet 实例
+    beforeEach(function () {
+        bigset = new BigSet(); // 创建新的 BigSet 实例
+    });
+
     // 测试添加元素的功能
     it("should add elements correctly", function () {
         bigset.add("Hello");
@@ -37,6 +44,7 @@ describe("BigSet", function () {
         expect(bigset.has("Hello")).to.be.true;
         expect(bigset.has("Bye-bye")).to.be.false;
     });
+
     // 值不能是非字符串类型
     it("value cannot be type other than string", function () {
         expect(() => bigset.add(123)).to.throw(
