@@ -19,7 +19,7 @@
 使用 npm 安装：
 
 ```bash
-npm install @clement_levi/bigset
+npm install node-bigset
 ```
 
 ## 使用示例
