@@ -22,12 +22,20 @@ Install via npm:
 npm install node-bigset
 ```
 
+In case of building error of node-gyp, [here](https://github.com/ClementLevi/node-BigSet/releases) offers pre-built binary file. You may clone this project by:
+```bash
+git clone https://github.com/ClementLevi/node-BigSet.git 
+```
+
+Then copy the folder to your node_modules folder.
+Finally unzip and install the pre-built binary file into `node_modules/node-BigSet/build/Release`.
+
 ## Usage Example
 
 Here is an example of how to use BigSet:
 
 ```javascript
-const BigSet = require('bigset');
+const { BigSet } = require("node-bigset");
 
 // Create an instance of BigSet
 const myBigSet = new BigSet();

@@ -22,12 +22,19 @@
 npm install node-bigset
 ```
 
+在使用 node-gyp 构建出现错误的情况下，[这里](https://github.com/ClementLevi/node-BigSet/releases)提供了预编译的二进制文件。你可以通过以下方式克隆该项目：
+```bash
+git clone https://github.com/ClementLevi/node-BigSet.git 
+```
+然后，将该文件夹复制到你的 node_modules 文件夹中。
+最后，将预编译的二进制文件解压并安装到 `node_modules/node-BigSet/build/Release` 中。
+
 ## 使用示例
 
 以下是如何使用 BigSet 的示例：
 
 ```javascript
-const BigSet = require('bigset');
+const { BigSet } = require("node-bigset");
 
 // 创建一个 BigSet 实例
 const myBigSet = new BigSet();
