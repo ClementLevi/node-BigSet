@@ -1,6 +1,7 @@
 #include "BigSet.h"
 
 // 构造函数
+// constructor
 BigSet::BigSet() : length(0), curr_set(0)
 {
     sets.push_back({});
@@ -8,6 +9,7 @@ BigSet::BigSet() : length(0), curr_set(0)
 }
 
 // 添加值
+// add a value to the set
 void BigSet::add(const std::string &value)
 {
     std::string hash = createHash(value);
@@ -31,6 +33,7 @@ void BigSet::add(const std::string &value)
 }
 
 // 检查是否存在
+// check if a value exists in the set
 bool BigSet::has(const std::string &value)
 {
     std::string hash = createHash(value);
@@ -43,6 +46,7 @@ bool BigSet::has(const std::string &value)
 }
 
 // 删除值
+// delete a value from the set
 void BigSet::deleteValue(const std::string &value, Napi::Env env)
 {
     if (!has(value))
@@ -62,6 +66,7 @@ void BigSet::deleteValue(const std::string &value, Napi::Env env)
 }
 
 // 随机返回一个值
+// return a random value from the set
 std::string BigSet::random()
 {
     std::random_device rd;
@@ -83,6 +88,7 @@ std::string BigSet::random()
 }
 
 // 转换为字符串
+// convert the set to a string
 std::string BigSet::toString()
 {
     std::string result;
@@ -100,12 +106,14 @@ std::string BigSet::toString()
 }
 
 // 获取集合长度
+// get the length of the set
 size_t BigSet::getLength()
 {
     return length;
 }
 
 // 创建哈希
+// create a hash for the input string
 std::string BigSet::createHash(const std::string &input)
 {
     std::hash<std::string> hasher;
@@ -113,6 +121,7 @@ std::string BigSet::createHash(const std::string &input)
 }
 
 // N-API 绑定代码
+// N-API binding code
 Napi::Object CreateBigSet(const Napi::CallbackInfo &info)
 {
     Napi::Env env = info.Env();
@@ -122,6 +131,7 @@ Napi::Object CreateBigSet(const Napi::CallbackInfo &info)
     obj.Set(Napi::String::New(env, "instance"), Napi::External<BigSet>::New(env, bigSet));
 
     // 显式捕获 env
+    // explicit capture of env
     obj.Set("add", Napi::Function::New(env, [bigSet, env](const Napi::CallbackInfo &info)
                                        {
         Napi::String value = info[0].As<Napi::String>();
@@ -146,7 +156,7 @@ Napi::Object CreateBigSet(const Napi::CallbackInfo &info)
     obj.Set("getLength", Napi::Function::New(env, [bigSet, env](const Napi::CallbackInfo &info)
                                              { return Napi::Number::New(env, bigSet->getLength()); }));
 
-    return obj; // 返回这个对象
+    return obj; // 返回这个对象  return this object 
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)

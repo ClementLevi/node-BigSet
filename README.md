@@ -2,12 +2,16 @@
 
 一个高性能的集合类，用于处理大量元素的添加、查找和删除操作。
 
+[ENGLISH](./README.en.md) | 中文
+
 ## 特性
 
 - 支持高效的元素添加和查找
 - 自动维护元素的唯一性
 - 能够处理百万级别的数据
-- 支持 Node.js 插件接口
+- 由N-API打造CPP插件而成
+- 目前仅支持字符串
+- **CommonJS**支持
 - ~整个项目都是AI生成的，我根本看不懂里面写了什么~
 
 ## 安装
@@ -58,7 +62,7 @@ npm run test
 
 ## 贡献
 
-欢迎任何形式的贡献！如果您有想法，请创建问题或提交 Pull Request。
+欢迎任何形式的贡献！如果您有想法，请创建Issue或提交 Pull Request。
 
 1. Fork 此仓库
 2. 创建您的特性分支 (git checkout -b feature/YourFeature)
@@ -68,8 +72,10 @@ npm run test
 
 ## 许可
 
-该项目采用 MIT 许可，详情请查看 LICENSE 文件。
+该项目采用 MIT 许可，详情请查看 [LICENSE](./LICENSE) 文件。
 
 ## 免责声明
 
 本项目基于 C++ 插件开发，并在 Node.js 环境中运行。请确保在使用前按照说明正确构建和配置插件。
+
+开发过程中广泛使用了[Fitten Code](https://code.fittentech.com/)。
